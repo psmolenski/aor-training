@@ -1,0 +1,32 @@
+<table class="table" ng-if="wagers.length > 0">
+    <thead>
+        <tr>
+            <th>Game</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <th class="text-right">Total</th>
+            <td colspan="2">{{total | currency}}</td>
+        </tr>
+    </tfoot>
+
+    <tbody>
+        <tr ng-repeat="wager in wagers" >
+            <td>{{wager.game}}</td>
+            <td>{{wager.price | currency}}</td>
+            <td>
+                <span class="close" ng-click="action({
+                    index: $index
+                })">&times;</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="well well-lg" ng-if="wagers.length === 0">
+    List is empty
+</div>

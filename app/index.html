@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aurora</title>
+
+    <link rel="stylesheet" href="../lib/bootstrap.css" />
+</head>
+<body>
+
+<div ng-app="app">
+
+    <navbar></navbar>
+
+    <div class="container" ui-view>
+
+
+
+    </div>
+
+</div>
+
+<script src="../lib/angular.js"></script>
+<script src="../lib/angular-ui-router.js"></script>
+
+<script src="app.js"></script>
+<script src="components/navbar/navbar.js"></script>
+<script src="components/section/section.js"></script>
+<script src="components/sales-list/sales-list.js"></script>
+<script src="components/qp-btn/qp-btn.js"></script>
+<script src="components/wager-form/wager-form.js"></script>
+<script src="services/sales-list-service.js"></script>
+<script src="services/history-service.js"></script>
+
+
+</body>
+</html>

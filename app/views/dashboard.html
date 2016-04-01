@@ -1,0 +1,22 @@
+<div class="col-sm-6">
+    <section name="Create wager">
+        <wager-form games="ctrl.games" action="ctrl.salesListService.addWager(wager)"></wager-form>
+    </section>
+    <section name="Quick picks">
+        <qp-btn game="Lotto" price="1" action="ctrl.salesListService.addWager(wager)"></qp-btn>
+        <qp-btn game="Keno" price="1" action="ctrl.salesListService.addWager(wager)"></qp-btn>
+        <qp-btn game="Pick3" price="1" action="ctrl.salesListService.addWager(wager)"></qp-btn>
+    </section>
+</div>
+
+<div class="col-sm-6">
+    <section name="Sales list">
+        <sales-list wagers="ctrl.salesListService.wagers"
+                    action="ctrl.salesListService.remove(index)"
+                    total="ctrl.salesListService.getTotal()"></sales-list>
+
+        <div class="text-center">
+            <button class="btn btn-lg btn-success" ng-click="ctrl.sell()" ng-hide="ctrl.salesListService.wagers.length === 0">Sell</button>
+        </div>
+    </section>
+</div>
